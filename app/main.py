@@ -1,10 +1,18 @@
 from fastapi import FastAPI
-from contextlib import asynccontextmanager
+
+from app.scheduler import start_scheduler
 
 
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    yield
+app = FastAPI()
 
 
-app = FastAPI(lifespan=lifespan)
+@app.on_event("startup")
+def startup_event():
+    start_scheduler()
+
+
+@app.get("/")
+def root():
+    return {
+        "status": "running"
+    }
