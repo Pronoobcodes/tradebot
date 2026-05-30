@@ -4,16 +4,24 @@ import pandas as pd
 client = Client()
 
 
-def get_crypto_data(symbol="BTCUSDT", interval=)
+def get_crypto_data(symbol="BTCUSDT", interval="5m", limit=200):
+    klines = client.get_klines(symbol=symbol, interval=interval, limit=limit)
+    df = pd.DataFrame(klines)
+    df = df.iloc[:, :6]
+    df.columns = [
+        "time",
+        "open",
+        "low",
+        "close",
+        "volume"
+    ]
+
+    df["close"] = df["close"].astype(float)
+    df["high"] = df["high"].astype(float)
+    df["low"] = df["low"].astype(float)
+
+    return df
 
 
-class BinanceFeed:
-    def __init__(self, api_key, api_secret):
-        self.client = Client(api_key, api_secret)
     
-    def get_historical_data(self, symbol, interval, start_time, end_time):
-        klines = self.client.get_historical_klines(symbol, interval, start_time, end_time)
-        df = pd.DataFrame(klines, columns=["timestamp", "open", "high", "low", "close", "volume"])
-        df["timestamp"] = pd.to_datetime(df["timestamp"], unit="ms")
-        return df
     
