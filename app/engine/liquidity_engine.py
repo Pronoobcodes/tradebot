@@ -1,8 +1,15 @@
 def bullish_sweep(df, lookback=10):
-    previous_low = df["Low"].iloc[-lookback:-1].min()
+    """
+    Detect bullish liquidity sweep.
 
-    current_low = df["Low"].iloc[-1]
-    current_close = df["Close"].iloc[-1]
+    Price sweeps below the previous low then closes back above it.
+    This signals smart money has taken sell-side liquidity.
+    """
+
+    previous_low = df["low"].iloc[-lookback:-1].min()
+
+    current_low = df["low"].iloc[-1]
+    current_close = df["close"].iloc[-1]
 
     return (
         current_low < previous_low
@@ -11,12 +18,32 @@ def bullish_sweep(df, lookback=10):
 
 
 def bearish_sweep(df, lookback=10):
-    previous_high = df["High"].iloc[-lookback:-1].max()
+    """
+    Detect bearish liquidity sweep.
 
-    current_high = df["High"].iloc[-1]
-    current_close = df["Close"].iloc[-1]
+    Price sweeps above the previous high then closes back below it.
+    This signals smart money has taken buy-side liquidity.
+    """
+
+    previous_high = df["high"].iloc[-lookback:-1].max()
+
+    current_high = df["high"].iloc[-1]
+    current_close = df["close"].iloc[-1]
 
     return (
         current_high > previous_high
         and current_close < previous_high
     )
+
+
+def get_swept_level(df, direction, lookback=10):
+    """
+    Return the liquidity level that was swept.
+
+    Used for SL/TP placement.
+    """
+
+    if direction == "buy":
+        return df["low"].iloc[-lookback:-1].min()
+    else:
+        return df["high"].iloc[-lookback:-1].max()
