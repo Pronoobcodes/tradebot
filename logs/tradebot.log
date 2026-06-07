@@ -1,0 +1,10 @@
+2026-06-07 15:52:52,286 - tradebot - WARNING - Binance client unavailable — crypto feeds disabled
+2026-06-07 15:53:38,180 - tradebot - WARNING - Binance client unavailable — crypto feeds disabled
+2026-06-07 15:53:39,003 - tradebot - INFO - Fetching forex data: EURGBP
+2026-06-07 15:53:58,404 - tradebot - ERROR - Attempt 1: forex fetch failed EURGBP: "['time'] not in index"
+2026-06-07 15:54:00,405 - tradebot - INFO - Fetching forex data: EURGBP
+2026-06-07 15:54:01,525 - tradebot - ERROR - Attempt 2: forex fetch failed EURGBP: "['time'] not in index"
+2026-06-07 15:54:03,526 - tradebot - INFO - Fetching forex data: EURGBP
+2026-06-07 15:54:04,506 - tradebot - ERROR - Attempt 3: forex fetch failed EURGBP: "['time'] not in index"
+2026-06-07 15:54:06,508 - tradebot - ERROR - Failed to fetch forex data: EURGBP
+2026-06-07 15:54:06,509 - tradebot - INFO - Fetching commodity XAUUSD
