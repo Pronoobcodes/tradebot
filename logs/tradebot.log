@@ -8,3 +8,45 @@
 2026-06-07 15:54:04,506 - tradebot - ERROR - Attempt 3: forex fetch failed EURGBP: "['time'] not in index"
 2026-06-07 15:54:06,508 - tradebot - ERROR - Failed to fetch forex data: EURGBP
 2026-06-07 15:54:06,509 - tradebot - INFO - Fetching commodity XAUUSD
+2026-06-07 16:22:11,642 - tradebot - WARNING - Binance client unavailable — crypto feeds disabled
+2026-06-07 16:22:12,496 - tradebot - INFO - Fetching forex data: EURGBP
+2026-06-07 16:22:24,121 - tradebot - WARNING - Empty forex data: EURGBP
+2026-06-07 16:22:24,122 - tradebot - INFO - Fetching forex data: EURGBP
+2026-06-07 16:22:27,858 - tradebot - INFO - Loaded 1422 candles for EURGBP
+2026-06-07 16:22:27,867 - tradebot - INFO - Fetching commodity XAUUSD
+2026-06-07 16:22:29,377 - tradebot - ERROR - Commodity fetch error XAUUSD: "['time'] not in index"
+2026-06-07 16:22:31,378 - tradebot - INFO - Fetching commodity XAUUSD
+2026-06-07 16:22:33,079 - tradebot - ERROR - Commodity fetch error XAUUSD: "['time'] not in index"
+2026-06-07 16:22:35,080 - tradebot - INFO - Fetching commodity XAUUSD
+2026-06-07 16:22:37,049 - tradebot - ERROR - Commodity fetch error XAUUSD: "['time'] not in index"
+2026-06-07 16:22:39,049 - tradebot - ERROR - Failed commodity fetch: XAUUSD
+2026-06-07 16:22:39,050 - tradebot - INFO - Fetching index data SP500
+2026-06-07 16:22:40,857 - tradebot - ERROR - Attempt 1: SP500 index fetch failed: "['time'] not in index"
+2026-06-07 16:22:42,858 - tradebot - INFO - Fetching index data SP500
+2026-06-07 16:22:44,729 - tradebot - ERROR - Attempt 2: SP500 index fetch failed: "['time'] not in index"
+2026-06-07 16:22:46,730 - tradebot - INFO - Fetching index data SP500
+2026-06-07 16:22:49,243 - tradebot - ERROR - Attempt 3: SP500 index fetch failed: "['time'] not in index"
+2026-06-07 16:22:51,245 - tradebot - ERROR - Failed to fetch index data: SP500
+2026-06-07 16:22:51,246 - tradebot - ERROR - Binance client not initialized for BTCUSDT
+2026-06-07 16:23:43,645 - tradebot - WARNING - Binance client unavailable — crypto feeds disabled
+2026-06-07 16:23:44,470 - tradebot - INFO - Fetching forex data: EURGBP
+2026-06-07 16:23:47,247 - tradebot - INFO - Loaded 1422 candles for EURGBP
+2026-06-07 16:23:47,249 - tradebot - INFO - Fetching commodity XAUUSD
+2026-06-07 16:23:48,457 - tradebot - INFO - Loaded 5155 candles for XAUUSD
+2026-06-07 16:23:48,458 - tradebot - INFO - Fetching index data SP500
+2026-06-07 16:23:50,056 - tradebot - INFO - Loaded 1950 candles for SP500
+2026-06-07 16:23:50,057 - tradebot - ERROR - Binance client not initialized for BTCUSDT
+2026-06-07 16:24:42,331 - tradebot - WARNING - Binance client unavailable — using yfinance fallback for crypto
+2026-06-07 16:24:42,398 - tradebot - INFO - Fetching forex data: EURGBP
+2026-06-07 16:24:44,401 - tradebot - INFO - Loaded 1422 candles for EURGBP
+2026-06-07 16:24:44,404 - tradebot - INFO - Fetching commodity XAUUSD
+2026-06-07 16:24:46,705 - tradebot - INFO - Loaded 5155 candles for XAUUSD
+2026-06-07 16:24:46,707 - tradebot - INFO - Fetching index data SP500
+2026-06-07 16:24:47,812 - tradebot - INFO - Loaded 1950 candles for SP500
+2026-06-07 16:24:47,814 - tradebot - INFO - Fetching crypto data from yfinance fallback: BTCUSDT (BTC-USD)
+2026-06-07 16:24:48,701 - tradebot - INFO - Loaded 200 candles for BTCUSDT from yfinance fallback
+2026-06-07 16:26:08,620 - tradebot - WARNING - Binance client unavailable — using yfinance fallback for crypto
+2026-06-07 16:26:10,085 - tradebot - INFO - Trading bot starting up...
+2026-06-07 16:26:10,115 - tradebot - INFO - Scheduler started — scanning every 5 minutes
+2026-06-07 16:26:13,888 - tradebot - ERROR - Telegram send failed: 400 — {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2026-06-07 16:26:13,897 - tradebot - INFO - Trading bot is live
