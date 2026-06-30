@@ -6,7 +6,9 @@ Starts the scheduler on startup and provides monitoring endpoints.
 
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Header, HTTPException
+import os
+import sqlite3
 
 from app.scheduler import start_scheduler, scheduler, trade_manager
 from app.core.logger import logger
@@ -14,7 +16,8 @@ from app.core.utils import timestamp
 from app.config import SYMBOLS
 from app.telegram.notifier import send_message
 from app.telegram.formatter import format_startup
-import sqlite3
+
+CRON_SECRET = os.environ.get("CRON_SECRET")
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -104,3 +107,14 @@ def symbols():
         "count": len(SYMBOLS),
         "symbols": SYMBOLS,
     }
+
+
+@app.get("/run-check")
+def run_check(x_cron_secret: str = Header(None)):
+    """Run a single pass of the engine (for external cron triggers)."""
+    if CRON_SECRET and x_cron_secret != CRON_SECRET:
+        raise HTTPException(status_code=403, detail="Forbidden")
+    
+    from run_once import main as run_main
+    run_main()
+    return {"status": "ok"}
