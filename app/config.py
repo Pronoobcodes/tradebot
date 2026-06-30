@@ -15,43 +15,50 @@ MAX_TRADES_PER_DAY = 3
 SYMBOLS = {
     "BTCUSDT": {
         "type": "crypto",
-        "session": "crypto_morning",
+        "sessions": ["asia", "london", "new_york"],
         "timeframe": "5m",
+        "htf_timeframe": "1h",
     },
 
     "ETHUSDT": {
         "type": "crypto",
-        "session": "crypto_morning",
+        "sessions": ["asia", "london", "new_york"],
         "timeframe": "5m",
+        "htf_timeframe": "1h",
     },
 
     "EURGBP": {
         "type": "forex",
-        "session": "london",
+        "sessions": ["london"],
         "timeframe": "5m",
+        "htf_timeframe": "4h",
     },
 
     "NZDCAD": {
         "type": "forex",
-        "session": "london",
+        "sessions": ["asia", "london"],
         "timeframe": "5m",
+        "htf_timeframe": "4h",
     },
 
     "XAUUSD": {
         "type": "commodity",
-        "session": "ny",
-        "timeframe": "1m",
+        "sessions": ["london", "new_york"],
+        "timeframe": "5m",
+        "htf_timeframe": "4h",
     },
 
     "NAS100": {
         "type": "index",
-        "session": "ny",
-        "timeframe": "1m",
+        "sessions": ["ny_am"],
+        "timeframe": "5m",
+        "htf_timeframe": "1h",
     },
 
     "SP500": {
         "type": "index",
-        "session": "ny",
-        "timeframe": "1m",
+        "sessions": ["ny_am"],
+        "timeframe": "5m",
+        "htf_timeframe": "1h",
     }
 }

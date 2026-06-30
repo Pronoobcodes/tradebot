@@ -6,7 +6,7 @@ from app.data.commodities_feed import get_commodities_data
 from app.data.indices_feed import get_indices_data
 
 
-def get_market_data(symbol):
+def get_market_data(symbol, interval_override=None):
     """
     Route data requests to the correct feed based on asset type.
 
@@ -21,7 +21,7 @@ def get_market_data(symbol):
         return None
 
     asset_type = asset["type"]
-    interval = asset.get("timeframe", "5m")
+    interval = interval_override or asset.get("timeframe", "5m")
 
     try:
         if asset_type == "crypto":
@@ -59,3 +59,13 @@ def get_market_data(symbol):
             f"Feed router error for {symbol}: {e}"
         )
         return None
+
+
+def get_htf_data(symbol):
+    """Fetch HTF data using the htf_timeframe config."""
+    asset = SYMBOLS.get(symbol)
+    if not asset:
+        return None
+    
+    interval = asset.get("htf_timeframe", "1h")
+    return get_market_data(symbol, interval_override=interval)

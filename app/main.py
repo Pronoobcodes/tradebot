@@ -8,14 +8,13 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 
-from app.scheduler import start_scheduler, scheduler
+from app.scheduler import start_scheduler, scheduler, trade_manager
 from app.core.logger import logger
 from app.core.utils import timestamp
 from app.config import SYMBOLS
-from app.engine.trade_gate import state
 from app.telegram.notifier import send_message
 from app.telegram.formatter import format_startup
-
+import sqlite3
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -70,12 +69,29 @@ def health():
 @app.get("/status")
 def status():
     """Current trading state."""
+    
+    # Query sqlite for current active trades and today's trade count
+    active_trades = {}
+    today_count = 0
+    
+    try:
+        with sqlite3.connect(trade_manager.db_path) as conn:
+            conn.row_factory = sqlite3.Row
+            cursor = conn.execute("SELECT pair, direction, entry_price FROM active_trades")
+            for row in cursor.fetchall():
+                active_trades[row["pair"]] = dict(row)
+                
+            cursor = conn.execute("SELECT trade_count FROM daily_stats WHERE trade_date = ?", (trade_manager._get_today_date(),))
+            row = cursor.fetchone()
+            if row:
+                today_count = row["trade_count"]
+    except Exception as e:
+        logger.error(f"Error fetching status from db: {e}")
 
     return {
-        "active_trade": state.active_trade,
-        "trades_today": state.trade_count,
-        "can_trade": state.can_trade(),
-        "current_day": str(state.current_day),
+        "active_trades": active_trades,
+        "trades_today": today_count,
+        "current_day": trade_manager._get_today_date(),
         "timestamp": timestamp(),
     }
 
