@@ -88,3 +88,62 @@
 2026-06-30 17:09:40,588 - tradebot - INFO - Fetching crypto data from yfinance fallback: BTCUSDT (BTC-USD)
 2026-06-30 17:09:41,214 - tradebot - INFO - Loaded 113 candles for BTCUSDT from yfinance fallback
 2026-06-30 17:09:41,245 - tradebot - INFO - Loaded 113 candles for BTCUSDT from yfinance fallback
+2026-06-30 17:28:31,803 - tradebot - INFO - Telegram message sent
+2026-06-30 17:29:13,222 - tradebot - INFO - Telegram message sent
+2026-06-30 17:31:32,507 - tradebot - WARNING - Binance client unavailable — using yfinance fallback for crypto
+2026-06-30 17:31:33,901 - tradebot - INFO - Fetching forex data: EURGBP
+2026-06-30 17:31:36,516 - tradebot - INFO - Loaded 1345 candles for EURGBP
+2026-06-30 17:31:36,519 - tradebot - INFO - Fetching forex data: EURGBP
+2026-06-30 17:31:37,505 - tradebot - INFO - Loaded 29 candles for EURGBP
+2026-06-30 17:31:37,522 - tradebot - INFO - Fetching commodity XAUUSD
+2026-06-30 17:31:38,648 - tradebot - INFO - Loaded 975 candles for XAUUSD
+2026-06-30 17:31:38,651 - tradebot - INFO - Fetching commodity XAUUSD
+2026-06-30 17:31:39,707 - tradebot - WARNING - Only 23 candles for XAUUSD (need 50+)
+2026-06-30 17:31:39,708 - tradebot - INFO - Loaded 23 candles for XAUUSD
+2026-06-30 17:31:39,714 - tradebot - INFO - Fetching index data SP500
+2026-06-30 17:31:40,628 - tradebot - INFO - Loaded 349 candles for SP500
+2026-06-30 17:31:40,630 - tradebot - INFO - Fetching index data SP500
+2026-06-30 17:31:41,502 - tradebot - WARNING - Only 32 candles for SP500 (need 50+)
+2026-06-30 17:31:41,506 - tradebot - INFO - Loaded 32 candles for SP500
+2026-06-30 17:31:41,526 - tradebot - INFO - Fetching crypto data from yfinance fallback: BTCUSDT (BTC-USD)
+2026-06-30 17:31:42,869 - tradebot - INFO - Loaded 200 candles for BTCUSDT from yfinance fallback
+2026-06-30 17:31:42,871 - tradebot - INFO - Fetching crypto data from yfinance fallback: BTCUSDT (BTC-USD)
+2026-06-30 17:31:43,643 - tradebot - INFO - Loaded 113 candles for BTCUSDT from yfinance fallback
+2026-06-30 17:34:59,039 - tradebot - WARNING - Binance client unavailable — using yfinance fallback for crypto
+2026-06-30 17:35:00,166 - tradebot - INFO - Trading bot starting up...
+2026-06-30 17:35:00,186 - tradebot - INFO - Scheduler started — scanning every 5 minutes
+2026-06-30 17:35:01,280 - tradebot - INFO - Telegram message sent
+2026-06-30 17:35:01,288 - tradebot - INFO - Trading bot is live
+2026-06-30 17:40:00,656 - tradebot - INFO - Fetching crypto data from yfinance fallback: BTCUSDT (BTC-USD)
+2026-06-30 17:40:02,591 - tradebot - INFO - Loaded 200 candles for BTCUSDT from yfinance fallback
+2026-06-30 17:40:02,591 - tradebot - INFO - Fetching crypto data from yfinance fallback: BTCUSDT (BTC-USD)
+2026-06-30 17:40:03,353 - tradebot - INFO - Loaded 113 candles for BTCUSDT from yfinance fallback
+2026-06-30 17:40:03,355 - tradebot - INFO - Fetching crypto data from yfinance fallback: ETHUSDT (ETH-USD)
+2026-06-30 17:40:04,592 - tradebot - INFO - Loaded 200 candles for ETHUSDT from yfinance fallback
+2026-06-30 17:40:04,593 - tradebot - INFO - Fetching crypto data from yfinance fallback: ETHUSDT (ETH-USD)
+2026-06-30 17:40:05,608 - tradebot - INFO - Loaded 113 candles for ETHUSDT from yfinance fallback
+2026-06-30 17:40:05,611 - tradebot - INFO - Fetching forex data: EURGBP
+2026-06-30 17:40:06,805 - tradebot - INFO - Loaded 1347 candles for EURGBP
+2026-06-30 17:40:06,807 - tradebot - INFO - Fetching forex data: EURGBP
+2026-06-30 17:40:07,526 - tradebot - INFO - Loaded 29 candles for EURGBP
+2026-06-30 17:40:07,527 - tradebot - INFO - Fetching forex data: NZDCAD
+2026-06-30 17:40:08,797 - tradebot - INFO - Loaded 1347 candles for NZDCAD
+2026-06-30 17:40:08,799 - tradebot - INFO - Fetching forex data: NZDCAD
+2026-06-30 17:40:09,643 - tradebot - INFO - Loaded 29 candles for NZDCAD
+2026-06-30 17:40:09,645 - tradebot - INFO - Fetching commodity XAUUSD
+2026-06-30 17:40:10,651 - tradebot - INFO - Loaded 977 candles for XAUUSD
+2026-06-30 17:40:10,652 - tradebot - INFO - Fetching commodity XAUUSD
+2026-06-30 17:40:11,430 - tradebot - WARNING - Only 23 candles for XAUUSD (need 50+)
+2026-06-30 17:40:11,432 - tradebot - INFO - Loaded 23 candles for XAUUSD
+2026-06-30 17:40:11,434 - tradebot - INFO - Fetching index data NAS100
+2026-06-30 17:40:12,373 - tradebot - INFO - Loaded 351 candles for NAS100
+2026-06-30 17:40:12,375 - tradebot - INFO - Fetching index data NAS100
+2026-06-30 17:40:13,105 - tradebot - WARNING - Only 32 candles for NAS100 (need 50+)
+2026-06-30 17:40:13,106 - tradebot - INFO - Loaded 32 candles for NAS100
+2026-06-30 17:40:13,108 - tradebot - INFO - Fetching index data SP500
+2026-06-30 17:40:14,027 - tradebot - INFO - Loaded 351 candles for SP500
+2026-06-30 17:40:14,029 - tradebot - INFO - Fetching index data SP500
+2026-06-30 17:40:14,849 - tradebot - WARNING - Only 32 candles for SP500 (need 50+)
+2026-06-30 17:40:14,852 - tradebot - INFO - Loaded 32 candles for SP500
+2026-06-30 17:44:26,451 - tradebot - INFO - Trading bot shutting down...
+2026-06-30 17:44:26,452 - tradebot - INFO - Scheduler stopped

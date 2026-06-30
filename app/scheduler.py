@@ -100,7 +100,7 @@ def process_symbol(symbol):
 def scan_all():
     """Scan all symbols in a single scheduled job."""
 
-    logger.info(f"── Scan cycle started at {timestamp()} ──")
+    logger.info(f"--- Scan cycle started at {timestamp()} ---")
 
     for symbol in SYMBOLS:
         try:
@@ -108,7 +108,7 @@ def scan_all():
         except Exception as e:
             logger.error(f"Unhandled error processing {symbol}: {e}")
 
-    logger.info("── Scan cycle complete ──")
+    logger.info("--- Scan cycle complete ---")
 
 
 def start_scheduler():
